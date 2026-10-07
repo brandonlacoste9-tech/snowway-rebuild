@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snowway | Calgary NW Snow Removal — Unlimited Visits, $235/mo</title>
+<meta name="description" content="Snowway — NW Calgary's snow removal crew. Unlimited visits, photo updates after every clearing, no subcontractors, flat $235/mo. 200+ happy clients. Call or text 587-817-5434.">
+<style>
+  :root { --teal:#0e4d5c; --teal-d:#093845; --navy:#0c1e26; --amber:#f59e0b; --amber-d:#d98706; --paper:#f6f4ee; --ink:#14232b; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 22px; }
+
+  header { position:sticky; top:0; z-index:50; background:rgba(12,30,38,.97); backdrop-filter:blur(8px); }
+  .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+  .logo { font-weight:800; font-size:1.3rem; color:#fff; text-decoration:none; letter-spacing:.5px; }
+  .logo span { color:var(--amber); }
+  .nav-links { display:flex; gap:26px; align-items:center; }
+  .nav-links a { text-decoration:none; color:#dbe7ea; font-weight:600; font-size:.95rem; }
+  .nav-links a:hover { color:var(--amber); }
+  .btn { display:inline-block; background:var(--amber); color:#241a05 !important; padding:12px 28px; border-radius:999px; font-weight:800; text-decoration:none; transition:.2s; border:none; cursor:pointer; font-size:1rem; }
+  .btn:hover { background:var(--amber-d); transform:translateY(-1px); }
+  @media(max-width:760px){ .nav-links a:not(.btn){ display:none; } }
+
+  .hero { position:relative; min-height:88vh; display:flex; align-items:flex-end; color:#fff; overflow:hidden; }
+  .hero-bg { position:absolute; inset:0; }
+  .hero-bg img { width:100%; height:100%; object-fit:cover; display:block; }
+  .hero-shade { position:absolute; inset:0; background:linear-gradient(to top, rgba(8,20,26,.86) 0%, rgba(8,20,26,.3) 50%, rgba(8,20,26,.18) 100%); }
+  .hero-inner { position:relative; padding:70px 0 80px; width:100%; }
+  .hero h1 { font-size:clamp(2.3rem,5.5vw,4rem); line-height:1.08; font-weight:800; max-width:800px; text-shadow:0 2px 20px rgba(0,0,0,.5); }
+  .hero h1 em { color:var(--amber); font-style:normal; }
+  .hero p.lead { font-size:1.18rem; max-width:660px; margin:18px 0 28px; color:#eef3f4; }
+  .hero-cta-row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .phone-big { font-size:1.5rem; font-weight:800; color:#fff; text-decoration:none; }
+  .phone-big:hover { color:var(--amber); }
+  .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+  .badges span { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); padding:8px 16px; border-radius:999px; font-size:.88rem; font-weight:600; backdrop-filter:blur(4px); }
+
+  section { padding:76px 0; }
+  .kicker { color:var(--teal); font-weight:800; text-transform:uppercase; letter-spacing:2px; font-size:.82rem; margin-bottom:10px; }
+  h2 { font-size:clamp(1.7rem,3.5vw,2.5rem); font-weight:800; margin-bottom:14px; line-height:1.2; }
+  .sec-sub { color:#4c5f66; max-width:700px; margin-bottom:40px; font-size:1.05rem; }
+
+  .diff { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+  .diff-card { background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e6e0d2; box-shadow:0 8px 30px rgba(12,30,38,.07); }
+  .diff-card img { width:100%; height:160px; object-fit:cover; display:block; }
+  .diff-card .body { padding:22px 24px 26px; }
+  .diff-card h3 { font-size:1.12rem; margin-bottom:6px; }
+  .diff-card p { color:#4c5f66; font-size:.94rem; }
+  .diff-card .ico { font-size:1.8rem; }
+
+  .pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:26px; max-width:860px; }
+  .price-card { background:#fff; border-radius:22px; overflow:hidden; border:2px solid #e6e0d2; text-align:center; }
+  .price-card.featured { border-color:var(--amber); box-shadow:0 16px 44px rgba(245,158,11,.18); }
+  .price-card .tag { background:var(--amber); color:#241a05; font-weight:800; font-size:.8rem; padding:8px; text-transform:uppercase; letter-spacing:1px; }
+  .price-card .body { padding:30px 28px 36px; }
+  .price-card h3 { font-size:1.3rem; margin-bottom:4px; }
+  .price { font-size:3rem; font-weight:800; color:var(--navy); }
+  .price small { font-size:1rem; font-weight:600; color:#6b7a80; }
+  .price-card ul { list-style:none; margin:20px 0 26px; text-align:left; }
+  .price-card li { padding:7px 0 7px 30px; position:relative; color:#3c4c53; font-size:.96rem; }
+  .price-card li::before { content:"✓"; position:absolute; left:0; color:var(--teal); font-weight:800; }
+  .neighbor-deal { background:#fff8e6; border:2px dashed var(--amber); border-radius:16px; padding:20px 26px; margin-top:26px; max-width:860px; font-weight:600; }
+
+  .hoods { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+  .hoods span { background:#fff; border:1.5px solid #d8d2c0; padding:9px 20px; border-radius:999px; font-weight:600; font-size:.93rem; }
+
+  .quotes { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+  blockquote { background:#fff; border-radius:18px; padding:28px 26px; border:1px solid #e6e0d2; font-size:.95rem; color:#33413a; }
+  blockquote footer { margin-top:14px; font-weight:700; color:var(--ink); font-style:normal; }
+  .stars { color:var(--amber); font-size:1.05rem; letter-spacing:2px; }
+
+  .faq details { background:#fff; border:1px solid #e6e0d2; border-radius:14px; padding:18px 22px; margin-bottom:12px; }
+  .faq summary { font-weight:700; cursor:pointer; font-size:1.02rem; }
+  .faq p { margin-top:10px; color:#4c5f66; font-size:.96rem; }
+
+  .contact-band { background:linear-gradient(135deg, var(--navy) 0%, var(--teal-d) 100%); color:#fff; border-radius:24px; padding:60px 32px; }
+  .contact-band h2 { color:#fff; }
+  .contact-band p { color:#b9cdd4; max-width:600px; margin:12px 0 28px; }
+  .contact-band .phone-big { font-size:2rem; display:block; margin-bottom:24px; }
+  form { max-width:560px; }
+  form .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:600px){ form .row{ grid-template-columns:1fr; } }
+  form label { display:block; font-weight:600; font-size:.9rem; margin:12px 0 6px; color:#eef3f4; }
+  form input, form select, form textarea { width:100%; padding:12px 14px; border:1.5px solid #2c4a55; border-radius:12px; font-size:1rem; font-family:inherit; background:#0c1e26; color:#fff; }
+  form input::placeholder, form textarea::placeholder { color:#7d93a0; }
+  form textarea { min-height:90px; resize:vertical; }
+  form select option { background:#0c1e26; }
+
+  footer { background:var(--navy); color:#8fa0a8; padding:36px 0; font-size:.92rem; }
+  footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; align-items:center; }
+  footer a { color:#fff; font-weight:700; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">❄️ SNOW<span>WAY</span></a>
+    <nav class="nav-links">
+      <a href="#why">Why Snowway</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#areas">Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn" href="tel:+15878175434">587-817-5434</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-bg"><img src="photos/hero-crew.jpg" alt="Snowway crew shoveling a Calgary driveway"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-inner">
+    <h1>NW Calgary snow removal with <em>unlimited visits.</em></h1>
+    <p class="lead">Your designated crew shows up every time it snows — and sends you a photo when they're done. 200+ neighbours already trust Snowway.</p>
+    <div class="hero-cta-row">
+      <a class="btn" href="#pricing">See Pricing</a>
+      <a class="phone-big" href="tel:+15878175434">📞 587-817-5434</a>
+    </div>
+    <div class="badges">
+      <span>🏠 200+ snow removal clients</span>
+      <span>📸 Photo after every visit</span>
+      <span>👷 No subcontractors — ever</span>
+    </div>
+  </div>
+</div>
+
+<section id="why">
+  <div class="wrap">
+    <div class="kicker">Why Snowway</div>
+    <h2>Service is what separates great from good.</h2>
+    <p class="sec-sub">One flat monthly rate. The same crew, every time. And proof on your phone after every visit.</p>
+    <div class="diff">
+      <div class="diff-card"><img src="photos/cleared.jpg" alt="Perfectly cleared driveway at sunrise"><div class="body"><div class="ico">♾️</div><h3>Unlimited visits</h3><p>Your crew shows up every time it snows — no matter how many times. Anything over 1cm of accumulation triggers a visit.</p></div></div>
+      <div class="diff-card"><img src="photos/sidewalk.jpg" alt="Freshly shoveled city sidewalk"><div class="body"><div class="ico">📸</div><h3>Photo notifications</h3><p>After each service you get a photo of your cleared property. See exactly how it looks — confidence and peace of mind.</p></div></div>
+      <div class="diff-card"><div class="body"><div class="ico">👷</div><h3>No subcontractors</h3><p>Always our own crews — usually the same person at your home, so service gets better every visit.</p></div></div>
+      <div class="diff-card"><div class="body"><div class="ico">💲</div><h3>Flat monthly rate</h3><p>One predictable price, Nov 1 to Apr 30. Icemelt included. No hidden fees, no surprises.</p></div></div>
+      <div class="diff-card"><img src="photos/deck.jpg" alt="Cleared back deck with barbecue in winter"><div class="body"><div class="ico">🎛️</div><h3>Fully customizable</h3><p>Driveway? Sidewalk? Walkway? Back deck so you can still barbecue? You choose what gets cleared.</p></div></div>
+      <div class="diff-card"><div class="body"><div class="ico">⚖️</div><h3>Bylaw-safe, guaranteed</h3><p>Cleared within Calgary's 24-hour bylaw window — our goal is six daylight hours after the snow stops.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background:#fff;">
+  <div class="wrap">
+    <div class="kicker">Pricing</div>
+    <h2>Simple pricing, serious value.</h2>
+    <div class="pricing" style="margin-top:28px;">
+      <div class="price-card featured">
+        <div class="tag">Residential</div>
+        <div class="body">
+          <h3>Standard Residential</h3>
+          <div class="price">$235<small>/month</small></div>
+          <ul>
+            <li>Driveway, walkway, city sidewalk &amp; bin area</li>
+            <li>Icemelt when needed — included</li>
+            <li>Unlimited visits per month</li>
+            <li>Cleared within 24 hours</li>
+            <li>Nov 1 – Apr 30 season</li>
+          </ul>
+          <a class="btn" href="#contact">Get Quote</a>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="body" style="padding-top:52px;">
+          <h3>Commercial</h3>
+          <div class="price" style="font-size:2rem;">Free Quote</div>
+          <ul>
+            <li>Parking lots, apartments, shopping centres</li>
+            <li>Salting and sanding</li>
+            <li>Priority service</li>
+            <li>Multiple visits throughout the day</li>
+          </ul>
+          <a class="btn" href="#contact">Get Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="neighbor-deal">🏘️ <strong>10% off</strong> when you sign up with a neighbour! Both of you save — houses within 1–3 doors or just across a quiet street count.</div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="kicker">Service Areas</div>
+    <h2>Proudly serving NW Calgary.</h2>
+    <p class="sec-sub">Now serving residential properties in Varsity &amp; nearby communities.</p>
+    <div class="hoods">
+      <span>Varsity</span><span>Arbour Lake</span><span>Brentwood</span><span>Citadel</span><span>Dalhousie</span><span>Edgemont</span><span>Hamptons</span><span>Hawkwood</span><span>Montgomery</span><span>Ranchlands</span><span>Rockland Park</span><span>Rocky Ridge</span><span>Royal Oak</span><span>Scenic Acres</span><span>Silver Springs</span><span>Tuscany</span><span>University Heights</span><span>Watermark</span>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:#fff;">
+  <div class="wrap">
+    <div class="kicker">Reviews</div>
+    <h2>Never a bad experience.</h2>
+    <div class="quotes" style="margin-top:28px;">
+      <blockquote><span class="stars">★★★★★</span><br>"They did an amazing job taking care of my property — professionally, efficiently, with great attention to detail. After the work, they sent clear pictures so I could see exactly how everything looked. Reliable, on time, done right."<footer>Google Review</footer></blockquote>
+      <blockquote><span class="stars">★★★★★</span><br>"The day after our service agreement ended we got 20cm of heavy spring snow — and Snowway came and cleared our driveway as a courtesy, at no charge! Will we use them again next year? Absolutely!"<footer>Google Review</footer></blockquote>
+      <blockquote><span class="stars">★★★★★</span><br>"Seth and his crew were fantastic — always arrived in the promised time frame and did a great job completely clearing the walk. Five-star service at a reasonable price!"<footer>Google Review</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <h2>Questions, answered.</h2>
+    <div class="faq" style="margin-top:28px; max-width:800px;">
+      <details><summary>What if my car is in the driveway?</summary><p>We'll clear around it and make sure you aren't blocked in — but we can't remove snow from under or on top of the vehicle.</p></details>
+      <details><summary>Can I book just for my vacation?</summary><p>Yes — our minimum booking is one month. We recommend booking a bit before and after your trip so you never shovel the day you get home.</p></details>
+      <details><summary>How does the neighbour discount work?</summary><p>Sign up with a neighbour (within 1–3 houses or just across a quiet street) and you both get 10% off.</p></details>
+      <details><summary>What does "unlimited visits" really mean?</summary><p>Every snowfall of 1cm or more triggers a visit — no caps, no counting, all season long.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact-band">
+      <div class="kicker" style="color:var(--amber);">Contact</div>
+      <h2>Ready for a worry-free winter?</h2>
+      <p>Call or text anytime — or send the form and we'll get back to you.</p>
+      <a class="phone-big" href="tel:+15878175434">📞 587-817-5434</a>
+      <form id="quoteForm">
+        <div class="row">
+          <div><label>Name<input required name="name" placeholder="Your name"></label></div>
+          <div><label>Phone<input required name="phone" type="tel" placeholder="(403) 555-0123"></label></div>
+        </div>
+        <label>Email<input name="email" type="email" placeholder="you@email.com"></label>
+        <label>Service needed
+          <select name="service"><option>Residential ($235/mo)</option><option>Commercial (Free Quote)</option><option>Neighbour Discount (10% off)</option></select>
+        </label>
+        <label>Property address<textarea name="address" placeholder="Street address, NW Calgary..."></textarea></label>
+        <button class="btn" type="submit" style="margin-top:18px;">Request Quote</button>
+      </form>
+      <p style="margin-top:18px; font-size:.85rem; color:#8fa0a8;">Open 7 days, 9am–5pm · Info@snowway.ca</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff;">❄️ Snowway</strong> · NW Calgary, AB · <a href="tel:+15878175434">587-817-5434</a></div>
+    <div>© 2025 Snowway · Residential &amp; Commercial Snow Removal</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const subject = encodeURIComponent('Quote request — ' + f.get('service'));
+  const body = encodeURIComponent('Name: '+f.get('name')+'\nPhone: '+f.get('phone')+'\nEmail: '+f.get('email')+'\nService: '+f.get('service')+'\n\nAddress:\n'+f.get('address'));
+  window.location.href = 'mailto:Info@snowway.ca?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
